@@ -28,8 +28,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
+
   font-size: calc(10px + 2vmin);
   color: white;
   background-attachment: fixed;
@@ -46,7 +45,6 @@
 }
 
 .container a:hover {
-  /* text-decoration: unset; */
   text-decoration: unset;
   color: #23b606;
 }

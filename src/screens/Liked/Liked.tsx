@@ -1,15 +1,11 @@
 import axios from '../../API/data-fetch';
 import React , { useState } from 'react';
-// import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaCartPlus, FaTrashAlt, FaInfoCircle } from "react-icons/fa";
 import Youtube from 'react-youtube';
 
-// import ShopContext from '../context/shop-context'
 import { MainNavigation } from '../../components/MainNavigation'
 import { IStore } from '../../helpers/types';
-// import { removeProductFromCart } from '../store/actions';
-// import {styles} from './Lighttheme.css'
 import './Liked.css';
 import { NavLink } from 'react-router-dom';
 

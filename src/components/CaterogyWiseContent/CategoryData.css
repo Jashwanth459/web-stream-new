@@ -145,7 +145,7 @@
   }
   .youtube_embed {
     position: relative;
-    margin-left: 300px;
+    margin-left: 300px !important;
   }
 
   .youtube_close_button {
@@ -155,7 +155,6 @@
     font-weight: bold;
     display: flex;
     /* position: relative; */
-    margin-right: 10px;
     box-shadow: 0px 0px 2px 2px rgba(245, 217, 95, 0.616);
     padding: 0px 10px;
     border-radius: 30px;

@@ -1,5 +1,4 @@
 export const LOADING = 'LOADING'
-export const GET_DATA = 'GET_DATA'
 export const MODE_TOGGLE = 'MODE_TOGGLE'
 export const ADD_TO_CART = 'ADD_TO_CART'
 export const ADD_TO_LIKED_LIST = 'ADD_TO_LIKED_LIST'

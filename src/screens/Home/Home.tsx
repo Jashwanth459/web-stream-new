@@ -3,7 +3,6 @@ import CategoryData from '../../components/CaterogyWiseContent/CategoryData';
 import { MainNavigation } from '../../components/MainNavigation';
 import requests from '../../API/category-urls';
 
-// import logo from '../../logo.svg';
 import './Home.css';
 import { useSelector } from 'react-redux';
 import { IStore } from '../../helpers/types';
