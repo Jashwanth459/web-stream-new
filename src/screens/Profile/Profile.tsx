@@ -11,8 +11,6 @@ export interface ILandings {
 
 function ProfilePage(props: any) {
   const cartItemCount = useSelector((state: ILandings) => state);
-  console.log('cartItem', cartItemCount)
-  console.log('props', props)
   const backgroundImage = !cartItemCount.landings.isLightTheme ? 
     `url('http://localhost:3000/statics/white_home_background.jpg')`
     : `url('http://localhost:3000/statics/black_home_background.jpg')`

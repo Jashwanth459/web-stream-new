@@ -7,6 +7,8 @@ import './Home.css';
 import { useSelector } from 'react-redux';
 import { IStore } from '../../helpers/types';
 
+import ReactNotification from 'react-notifications-component'
+
 export interface ILandings { 
   landings: IStore
 }
@@ -19,10 +21,10 @@ function Home(props: any) {
   const stylesObj = {
     backgroundImage
   }
-  console.log('home count', cartItemCount)
   return (
     <div className='App'>
       <MainNavigation cartItemNumber={cartItemCount.landings} />
+      <ReactNotification />
       <div className='container' style={stylesObj}>
         <CategoryData
           title='WEIRDO ORIGINALS'
@@ -35,7 +37,7 @@ function Home(props: any) {
         {/* <CategoryData title='Comedy Movies' fetchUrl={requests.fetchComedyMovies} />
         <CategoryData title='Horror Movies' fetchUrl={requests.fetchHorrorMovies} />
         <CategoryData title='Romance Movies' fetchUrl={requests.fetchRomanceMovies} />
-        <CategoryData title='Documentaries' fetchUrl={requests.fetchDocumentaries} /> */}
+      <CategoryData title='Documentaries' fetchUrl={requests.fetchDocumentaries} /> */}
       </div>
     </div>
   );

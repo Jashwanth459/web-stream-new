@@ -1,6 +1,7 @@
+import { notify } from '../../helpers/notification';
 import { IStore } from '../../helpers/types';
 
-import { LOADING, MODE_TOGGLE, ADD_TO_CART, ADD_TO_LIKED_LIST, REMOVE_FROM_LIKED_LIST } from '../constants';
+import { LOADING, MODE_TOGGLE, ADD_TO_CART, ADD_TO_LIKED_LIST, REMOVE_FROM_LIKED_LIST, REMOVE_FROM_CART } from '../constants';
 
 const INITIAL_STATE: IStore = {
     likedList: [],
@@ -30,10 +31,12 @@ export const ACTION_HANDLERS: any = {
     [ADD_TO_CART]: (state: IStore, action: any) => {
         var itemExistsInCart = state.cartList.some( (value: any) => { return value.id ===  action.payload.id} ); 
         if (itemExistsInCart) {
+            notify('Failed!!', 'Item already exists in the Cart...');
             return {
-                ...state
+                ...state,
             }
         }
+        notify('Successful!!', 'Saved to the Cart...');
         return { 
             ...state,
             cartSum: state.cartSum + 1,
@@ -44,10 +47,12 @@ export const ACTION_HANDLERS: any = {
     [ADD_TO_LIKED_LIST]: (state: IStore, action: any) => {
         var itemExistsInLikedList = state.likedList.some( (value: any) => { return value.id ===  action.payload.id} ); 
         if (itemExistsInLikedList) {
+            notify('Failed!!', 'Item already exists in the Liked list...');
             return {
-                ...state
+                ...state,
             }
         }
+        notify('Successful!!', 'Saved to the Liked list...');
         return { 
             ...state,
             likedSum: state.likedSum + 1,
@@ -57,12 +62,25 @@ export const ACTION_HANDLERS: any = {
 
     [REMOVE_FROM_LIKED_LIST]: (state: IStore, action: any) => {
         var filtered = state.likedList.filter(function(value: any, index, arr){ 
-            return !(value.id === action.payload.id);
+            return !(value.id === action.payload);
         });
+        notify('Successful!!', 'Removed from the Liked List...');
         return { 
             ...state,
             likedSum: state.likedSum - 1,
             likedList: [...filtered]
+        }
+    },
+
+    [REMOVE_FROM_CART]: (state: IStore, action: any) => {
+        var filtered = state.cartList.filter(function(value: any, index, arr){ 
+            return !(value.id === action.payload);
+        });
+        notify('Successful!!', 'Removed from the Cart...');
+        return { 
+            ...state,
+            cartSum: state.cartSum - 1,
+            cartList: [...filtered]
         }
     }
 }

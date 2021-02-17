@@ -34,7 +34,6 @@
   }
   
   .row_posters {
-    /* list-style: none; */
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -51,7 +50,6 @@
   }
 
   .row_poster:hover .poster_options {
-    /* display: flex; */
     font-size: 10px;
   }
   
@@ -66,16 +64,12 @@
   }
 
   .poster_options {
-    /* padding-top: 10px;
-    padding-left: 5px; */
     display: none;
-    /* display: flex; */
     position: absolute;
     flex-direction: row;
     color: black;
     padding: 0px;
     text-decoration: none;
-    /* display: block; */
     border: 2px solid white;
     border-radius: 2px;
     margin-left: -10px;
@@ -84,18 +78,15 @@
   .poster_options .large {
     flex-direction: column;
     margin-left: -10px;
-    /* display: none; */
   }
 
   .poster_options span {
     font-size: 15px;
     padding: 4px 8px;
     color: rgb(125, 173, 113);
-    /* box-shadow: 0 8px 16px 0 rgba(255, 254, 254, 0.226), 0 1px 2px 0 rgba(255, 209, 209, 0.19); */
   }
 
   .poster_options li {
-    /* padding: 5px 10px;; */
     margin: 0px;
     padding: 1px 4px;
     background-color: whitesmoke;
@@ -111,7 +102,6 @@
     margin-top: 5px;
     display: none;
     padding: 1px;
-    /* display: flex; */
     position: absolute;
     flex-direction: row;
     border-radius: 3px;
@@ -132,7 +122,6 @@
  .save_options:hover .poster_options {
     display: block;
     margin: 5px 0px 10px 220px;
-    /* margin-left: 10px;  */
   }
 
   .row_poster:hover .large {
@@ -154,7 +143,6 @@
     font-size: 35px;
     font-weight: bold;
     display: flex;
-    /* position: relative; */
     box-shadow: 0px 0px 2px 2px rgba(245, 217, 95, 0.616);
     padding: 0px 10px;
     border-radius: 30px;

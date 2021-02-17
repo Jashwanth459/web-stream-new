@@ -104,10 +104,6 @@
 }
 
 .youtube_embed {
-  /* z-index: 1; */
-  /* position: absolute; */
-  /* height: 90px;
-  width: 90px; */
   position: relative;
   margin-left: 200px;
 }
@@ -161,4 +157,8 @@
 
 .more_info:hover {
   color: rgb(223, 236, 108) !important;
+}
+
+.notifications-component {
+  margin-top: 70px;
 }

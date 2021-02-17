@@ -6,6 +6,12 @@ import Youtube from 'react-youtube';
 import { FaCartPlus, FaHeart, FaInfoCircle, FaStream } from "react-icons/fa";
 import { LazyImage } from '../LazyImage' 
 
+import { IStore } from '../../helpers/types';
+
+export interface ILandings { 
+  landings: IStore
+}
+
 interface ScreenProps {
     title: string
     fetchUrl: string
@@ -51,12 +57,15 @@ function CategoryData({ title, fetchUrl, isLargeRow } : ScreenProps) {
   };
 
   const addToCart = (movie: any) => {
-    console.log('movies is', movie)
-    dispatch({type: 'ADD_TO_CART', payload: movie})
+    if (window.confirm('Do you really want to add this item to your Cart..?')) {
+      dispatch({type: 'ADD_TO_CART', payload: movie})
+    }
   }
 
   const addTolikedList = (movie: any) => {
-    dispatch({type: 'ADD_TO_LIKED_LIST', payload: movie})
+    if (window.confirm('Do you really want to add this item to your List...? ')) {
+      dispatch({type: 'ADD_TO_LIKED_LIST', payload: movie})
+    }
   }
 
   const getMoreInfo = (movie: any) => {

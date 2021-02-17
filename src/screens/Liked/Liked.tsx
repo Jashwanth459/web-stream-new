@@ -8,13 +8,12 @@ import { MainNavigation } from '../../components/MainNavigation'
 import { IStore } from '../../helpers/types';
 import './Liked.css';
 import { NavLink } from 'react-router-dom';
-
+import ReactNotification from 'react-notifications-component'
 export interface ILandings { 
   landings: IStore
 }
 
-
-function CartPage(props: any) {
+function LikedPage(props: any) {
   const [trailerUrl, setTrailerUrl] = useState('');
   const dispatch = useDispatch();
   
@@ -22,37 +21,34 @@ function CartPage(props: any) {
     if (trailerUrl) {
       setTrailerUrl('');
     } else {
-      console.log('movie is', movie)
       let trailerurl = await axios.get(
         `/movie/${movie.id}/videos?api_key=fb34530271b349314af0de263d16ab5a`
       );
-      console.log('liked trailer url', trailerurl)
       setTrailerUrl(trailerurl.data.results[0]?.key);
     }
   };
   
   const baseImgUrl = 'https://image.tmdb.org/t/p/original';
   const cartItemCount = useSelector((state: ILandings) => state);
-  console.log('cartItem', cartItemCount)
-  console.log('props', props)
   const backgroundImage = !cartItemCount.landings.isLightTheme ? 
     `url('http://localhost:3000/statics/white_home_background.jpg')`
     : `url('http://localhost:3000/statics/black_home_background.jpg')`
   const stylesObj = {
     backgroundImage
   }
-  const addToCart = (movie: any) => {
-    console.log('movies is', movie)
-    dispatch({type: 'ADD_TO_CART', payload: movie})
+  const addToLikedList = (movie: any) => {
+    if (window.confirm('Do you really want to add Item to your List...?')) {
+      dispatch({type: 'ADD_TO_CART', payload: movie})
+    }
   }
 
   const removeFromLikedList = (movie: any) => {
-    console.log('movie', movie)
-    dispatch({type: 'REMOVE_FROM_LIKED_LIST', payload: movie})
+    if (window.confirm('Do you really want to delete Item from the your List')) {
+      dispatch({type: 'REMOVE_FROM_LIKED_LIST', payload: movie.id})
+    }
   }
 
   const getMoreInfo = (movie: any) => {
-    console.log('Movie is', movie);
     if (movie && movie.name) {
       const queryString = `${movie.name} Movie`
       window.open('http://google.com/search?q='+queryString);
@@ -63,6 +59,7 @@ function CartPage(props: any) {
   return (
     <div className='App'>
     <MainNavigation cartItemNumber={cartItemCount.landings} />
+    <ReactNotification />
     <div className='container' style={stylesObj}>
       {cartItemCount.landings.likedList.length <=0 && <p>No items in the liked list. Add some from   <NavLink to='/' title='Home'>Home</NavLink></p>}
       <ul className='liked_list'>
@@ -79,7 +76,7 @@ function CartPage(props: any) {
                   <div className='listing_header_text'><strong>{item.name}</strong> - {item.vote_average}/10 (
                   {item.vote_count} votes)</div>
                   <ul className={`listing_header_options`}>
-                      <li className='add_to_cart' title='Add to Cart' onClick={() => { addToCart(item) }}><FaCartPlus /> </li>
+                      <li className='add_to_cart' title='Add to Cart' onClick={() => { addToLikedList(item) }}><FaCartPlus /> </li>
                       <li className='remove_from_cart' title='Remove from Liked List' onClick={() => { removeFromLikedList(item) }}><FaTrashAlt /> </li>
                       <li className='more_info' title='More Info' onClick={() => { getMoreInfo(item) }}><FaInfoCircle /> </li>
                   </ul>
@@ -99,4 +96,4 @@ function CartPage(props: any) {
   );
 }
 
-export default CartPage
+export default LikedPage

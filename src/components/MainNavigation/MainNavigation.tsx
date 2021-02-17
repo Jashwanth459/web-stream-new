@@ -5,10 +5,17 @@ import { useDispatch } from 'react-redux'
 import { FaCartArrowDown, FaHandHoldingHeart, FaHome, FaUserAlt, FaStream } from 'react-icons/fa';
 
 import './MainNavigation.css';
+import { IStore } from '../../helpers/types';
+import 'react-notifications-component/dist/theme.css'
+
+export interface ILandings { 
+  landings: IStore
+}
 
 function MainNavigation(props: any) {
+
   const dispatch = useDispatch()
-  console.log('props here', props)
+  
   return (
     <header className='main-navigation'>
       <nav>

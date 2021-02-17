@@ -133,3 +133,19 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.status_message {
+  display: flex;
+  color: rgb(185, 194, 61);
+  margin: 15px 30px 0px 0px;
+  float: right;
+  padding: 5px;
+  background-color: rgba(128, 117, 75, 0.397);
+  border-radius: 5px;
+}
+
+.status_message hidden {
+  visibility: hidden;
+  opacity : 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
