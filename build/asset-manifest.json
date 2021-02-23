@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.9a98ccb7.chunk.css",
-    "main.js": "/static/js/main.52f7e661.chunk.js",
-    "main.js.map": "/static/js/main.52f7e661.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.07ef35d7.js",
-    "runtime-main.js.map": "/static/js/runtime-main.07ef35d7.js.map",
-    "static/css/2.c49baa93.chunk.css": "/static/css/2.c49baa93.chunk.css",
-    "static/js/2.ccaa4654.chunk.js": "/static/js/2.ccaa4654.chunk.js",
-    "static/js/2.ccaa4654.chunk.js.map": "/static/js/2.ccaa4654.chunk.js.map",
-    "static/js/3.33e327c4.chunk.js": "/static/js/3.33e327c4.chunk.js",
-    "static/js/3.33e327c4.chunk.js.map": "/static/js/3.33e327c4.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.c49baa93.chunk.css.map": "/static/css/2.c49baa93.chunk.css.map",
-    "static/css/main.9a98ccb7.chunk.css.map": "/static/css/main.9a98ccb7.chunk.css.map",
-    "static/js/2.ccaa4654.chunk.js.LICENSE.txt": "/static/js/2.ccaa4654.chunk.js.LICENSE.txt"
+    "main.css": "/web-stream-new/static/css/main.9a98ccb7.chunk.css",
+    "main.js": "/web-stream-new/static/js/main.52f7e661.chunk.js",
+    "main.js.map": "/web-stream-new/static/js/main.52f7e661.chunk.js.map",
+    "runtime-main.js": "/web-stream-new/static/js/runtime-main.d8d0e9b4.js",
+    "runtime-main.js.map": "/web-stream-new/static/js/runtime-main.d8d0e9b4.js.map",
+    "static/css/2.c49baa93.chunk.css": "/web-stream-new/static/css/2.c49baa93.chunk.css",
+    "static/js/2.0ffed884.chunk.js": "/web-stream-new/static/js/2.0ffed884.chunk.js",
+    "static/js/2.0ffed884.chunk.js.map": "/web-stream-new/static/js/2.0ffed884.chunk.js.map",
+    "static/js/3.33e327c4.chunk.js": "/web-stream-new/static/js/3.33e327c4.chunk.js",
+    "static/js/3.33e327c4.chunk.js.map": "/web-stream-new/static/js/3.33e327c4.chunk.js.map",
+    "index.html": "/web-stream-new/index.html",
+    "static/css/2.c49baa93.chunk.css.map": "/web-stream-new/static/css/2.c49baa93.chunk.css.map",
+    "static/css/main.9a98ccb7.chunk.css.map": "/web-stream-new/static/css/main.9a98ccb7.chunk.css.map",
+    "static/js/2.0ffed884.chunk.js.LICENSE.txt": "/web-stream-new/static/js/2.0ffed884.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.07ef35d7.js",
+    "static/js/runtime-main.d8d0e9b4.js",
     "static/css/2.c49baa93.chunk.css",
-    "static/js/2.ccaa4654.chunk.js",
+    "static/js/2.0ffed884.chunk.js",
     "static/css/main.9a98ccb7.chunk.css",
     "static/js/main.52f7e661.chunk.js"
   ]
