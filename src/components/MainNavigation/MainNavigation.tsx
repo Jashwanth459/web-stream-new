@@ -1,8 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useDispatch } from 'react-redux'
-
 import { FaCartArrowDown, FaHandHoldingHeart, FaHome, FaUserAlt, FaStream } from 'react-icons/fa';
+import { useDispatch } from 'react-redux'
+import { NavLink } from 'react-router-dom';
+
 
 import './MainNavigation.css';
 import { IStore } from '../../helpers/types';

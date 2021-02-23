@@ -1,14 +1,15 @@
-import axios from '../../API/data-fetch';
 import React , { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { FaCartPlus, FaTrashAlt, FaInfoCircle } from "react-icons/fa";
+import ReactNotification from 'react-notifications-component'
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import Youtube from 'react-youtube';
 
+import './Liked.css';
+import axios from '../../API/data-fetch';
 import { MainNavigation } from '../../components/MainNavigation'
 import { IStore } from '../../helpers/types';
-import './Liked.css';
-import { NavLink } from 'react-router-dom';
-import ReactNotification from 'react-notifications-component'
+
 export interface ILandings { 
   landings: IStore
 }

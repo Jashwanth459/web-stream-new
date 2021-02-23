@@ -1,17 +1,14 @@
 import React, {useState} from 'react';
-import axios from '../../API/data-fetch';
 import { FaTrashAlt, FaInfoCircle, FaRegPaperPlane, FaAngleDoubleRight } from "react-icons/fa";
-
+import ReactNotification from 'react-notifications-component'
 import { useSelector, useDispatch } from 'react-redux'
+import { NavLink } from 'react-router-dom';
+import Youtube from 'react-youtube';
+
+import './Cart.css';
+import axios from '../../API/data-fetch';
 import { MainNavigation } from '../../components/MainNavigation'
 import { IStore } from '../../helpers/types';
-import './Cart.css';
-
-import ReactNotification from 'react-notifications-component'
-
-
-import Youtube from 'react-youtube';
-import { NavLink } from 'react-router-dom';
 
 export interface ILandings { 
   landings: IStore

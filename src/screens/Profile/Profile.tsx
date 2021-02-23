@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+import './Profile.css';
 import { MainNavigation } from '../../components/MainNavigation'
 import { IStore } from '../../helpers/types';
-import './Profile.css';
 
 export interface ILandings { 
   landings: IStore

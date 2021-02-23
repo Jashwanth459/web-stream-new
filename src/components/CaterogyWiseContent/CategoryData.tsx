@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import {useDispatch} from 'react-redux';
-import axios from '../../API/data-fetch';
-import './CategoryData.css';
-import Youtube from 'react-youtube';
 import { FaCartPlus, FaHeart, FaInfoCircle, FaStream } from "react-icons/fa";
-import { LazyImage } from '../LazyImage' 
+import {useDispatch} from 'react-redux';
+import Youtube from 'react-youtube';
 
+import axios from '../../API/data-fetch';
 import { IStore } from '../../helpers/types';
+import './CategoryData.css';
+import { LazyImage } from '../LazyImage' 
 
 export interface ILandings { 
   landings: IStore
