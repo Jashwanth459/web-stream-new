@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from '../../API/data-fetch';
-import { FaTrashAlt, FaInfoCircle } from "react-icons/fa";
+import { FaTrashAlt, FaInfoCircle, FaRegPaperPlane, FaAngleDoubleRight } from "react-icons/fa";
 
 import { useSelector, useDispatch } from 'react-redux'
 import { MainNavigation } from '../../components/MainNavigation'
@@ -15,6 +15,24 @@ import { NavLink } from 'react-router-dom';
 
 export interface ILandings { 
   landings: IStore
+}
+
+function FixedFooter(props: any) {
+  return(
+    <footer className='footer-navigation'>
+      <ul className='fixed_footer'>
+        <li className='cost_info'>
+          Your Cart has {props.cartCount} item(s) with total cost of {'[#] $'}
+        </li>
+        <li className='check_out' onClick={() => {alert('We appreciate your interest, we still working on this. Keep tuned..!')}}>
+          <p>
+            Checkout to buy 
+            <FaAngleDoubleRight />
+          </p>
+        </li>
+      </ul>
+    </footer>
+  )
 }
 
 function CartPage(props: any) {
@@ -75,6 +93,7 @@ function CartPage(props: any) {
                   <div className='listing_header_text'><strong>{item.name}</strong> - {item.vote_average}/10 (
                   {item.vote_count} votes)</div>
                   <ul className={`listing_header_options`}>
+                      <li className='check_out' title='Checkout to buy' onClick={() => {alert('Thanks for your interest, we still working on this. Keep tuned..!')}}><FaRegPaperPlane /></li>
                       <li className='remove_from_cart' title='Remove from Cart' onClick={() => { removeFromCart(item) }}><FaTrashAlt /> </li>
                       <li className='more_info' title='More Info' onClick={() => { getMoreInfo(item) }}><FaInfoCircle /> </li>
                   </ul>
@@ -85,6 +104,7 @@ function CartPage(props: any) {
         )
         )}
       </ul>
+      {cartItemCount.landings.cartList.length > 0 && <FixedFooter cartCount={cartItemCount.landings.cartList.length} />}
       {trailerUrl && <div className='youtube_embed'>
         <span className="youtube_close_button" onClick={() => {setTrailerUrl('')}}>&times;</span>
         <Youtube videoId={trailerUrl}/> 

@@ -2,6 +2,7 @@ import React from 'react';
 import CategoryData from '../../components/CaterogyWiseContent/CategoryData';
 import { MainNavigation } from '../../components/MainNavigation';
 import requests from '../../API/category-urls';
+// import AdSense from 'react-adsense';
 
 import './Home.css';
 import { useSelector } from 'react-redux';
@@ -32,6 +33,7 @@ function Home(props: any) {
           isLargeRow
         />
         <CategoryData title='Trending Now' fetchUrl={requests.fetchTrending} />
+
         {/* <CategoryData title='Top Rated' fetchUrl={requests.fetchTopRated} />
         <CategoryData title='Action Movies' fetchUrl={requests.fetchActionMovies} /> */}
         {/* <CategoryData title='Comedy Movies' fetchUrl={requests.fetchComedyMovies} />
