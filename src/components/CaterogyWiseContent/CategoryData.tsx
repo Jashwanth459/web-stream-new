@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaCartPlus, FaHeart, FaInfoCircle, FaStream } from "react-icons/fa";
-import {useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Youtube from 'react-youtube';
 
 import axios from '../../API/data-fetch';
